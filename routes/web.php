@@ -34,3 +34,13 @@ Route::get('/demo', function () {
 Route::get('user/{name?}', function ($name = null) {
     return $name;
 });
+Route::get('/crud/form', function () {
+    return view('/crud/form');
+ });
+Route::get('/siswa', 'SiswaController@index')->name('siswa.index');
+Route::get('/siswa/simpan', 'SiswaController@simpan')->name('siswa.simpan');
+Route::post('/siswa', 'SiswaController@prosesSimpan')->name('siswa.prosesSimpan');
+
+Route::get('/datasiswa', 'SiswaController@tampil');
+Route::get('/siswa/{siswa}', 'SiswaController@detail');
+Route::get('/siswa/hapus/{id}', 'SiswaController@hapus');
