@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/hello', function () {
-    return "ma nigga";
+    return "ma boy";
 });
 Route::get('/profile', function () {
     return view('profile');
